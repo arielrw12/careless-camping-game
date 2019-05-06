@@ -14,6 +14,8 @@ public class Application {
 		
 		System.out.println("Bob is packing his own clothes and everything that Charlie will need for the weekend, but you have to pack everything else.");
 		
+//		line about having a bookbag with clothes, etc
+		
 		System.out.println("Bob drives a tiny car, so we have a limited amount of space for packing.");
 		
 		System.out.println("You can pick 5 of the following items to bring along:");
