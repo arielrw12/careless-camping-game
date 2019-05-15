@@ -41,7 +41,8 @@ public abstract class CampingIndividual {
 		return items;
 	}
 	
-	public void addItemToCamperInventory(Item item) {
-		items.add(item);
-	}
+//	public void addItemToCamperInventory(Item item) {
+//		items.add(item);
+//		item.togglePossession();
+//	}
 }

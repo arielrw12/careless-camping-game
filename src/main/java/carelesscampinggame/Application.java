@@ -2,6 +2,9 @@ package carelesscampinggame;
 
 import java.util.Scanner;
 
+import carelesscampinggame.campingcrew.WholeCrew;
+import carelesscampinggame.items.Item;
+
 public class Application {
 	
 	public static void main(String[] args) {
@@ -28,7 +31,7 @@ public class Application {
 		
 		System.out.println("4. A cooler with plenty of water, stuff for sandwiches, veggies, fruit, and smores");
 		
-		System.out.println("5. A bear bag to hoist your food up");
+		System.out.println("5. A map");
 		
 		System.out.println("6. A tarp");
 		
@@ -49,7 +52,14 @@ public class Application {
 		String fifthChoice = input.nextLine();
 		
 		System.out.println("You have chosen items " + firstChoice +", " + secondChoice + ", " + thirdChoice + ", " + fourthChoice + ", and " + fifthChoice + ".");
-		
+		if (firstChoice.equals("1") || secondChoice.equals("1") || thirdChoice.equals("1") || fourthChoice.equals("1") || fifthChoice.equals("1")) {
+			// create tent class and create tent object below..............................
+			WholeCrew crew = new WholeCrew("crew");
+			Item tent = new Item("tent");
+			crew.addItemToCamperInventory(tent);
+			System.out.println(crew.getItems());
+			
+		}
 		
 	}
 
