@@ -4,17 +4,17 @@ import carelesscampinggame.campingcrew.CampingIndividual;
 
 public abstract class Item {
 
-	private String name;
+	//private String name;
 	private boolean possession;
 
-	public Item(String name, boolean possession) {
-		this.name = name;
+	public Item(boolean possession) {
+		//this.name = name;
 		this.possession = false;
 	}
 
-	public String getName() {
-		return name;
-	}
+//	public String getName() {
+//		return name;
+//	}
 	
 	public boolean getPossession() {
 		return possession;

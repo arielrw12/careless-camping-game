@@ -3,13 +3,20 @@ package carelesscampinggame;
 import java.util.Scanner;
 
 import carelesscampinggame.campingcrew.WholeCrew;
+import carelesscampinggame.items.FireSupplies;
 import carelesscampinggame.items.Item;
+import carelesscampinggame.items.Map;
+import carelesscampinggame.items.SleepSupplies;
+import carelesscampinggame.items.Tarp;
+import carelesscampinggame.items.Tent;
+import carelesscampinggame.items.WaterAndFood;
 
 public class Application {
 	
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
+		WholeCrew crew = new WholeCrew("crew");
 
 		System.out.println("What a beautiful weekend to go camping! Let's pack the car and hit the road!");
 
@@ -52,21 +59,58 @@ public class Application {
 		String fifthChoice = input.nextLine();
 		
 		System.out.println("You have chosen items " + firstChoice +", " + secondChoice + ", " + thirdChoice + ", " + fourthChoice + ", and " + fifthChoice + ".");
+		
 		if (firstChoice.equals("1") || secondChoice.equals("1") || thirdChoice.equals("1") || fourthChoice.equals("1") || fifthChoice.equals("1")) {
-			// create tent class and create tent object below..............................
-			WholeCrew crew = new WholeCrew("crew");
-			Item tent = new Item("tent");
+			Tent tent = new Tent(false);
 			crew.addItemToCamperInventory(tent);
-			System.out.println(crew.getItems());
-			
 		}
 		
 		if (firstChoice.equals("2") || secondChoice.equals("2") || thirdChoice.equals("2") || fourthChoice.equals("2") || fifthChoice.equals("2")) {
-			// create tent class and create tent object below..............................
-			WholeCrew crew = new WholeCrew("crew");
-			Item tent = new Item("tent");
-			crew.addItemToCamperInventory(tent);
+			SleepSupplies sleepSupplies = new SleepSupplies(false);
+			crew.addItemToCamperInventory(sleepSupplies);
+		}
 		
-	}
+		if (firstChoice.equals("3") || secondChoice.equals("3") || thirdChoice.equals("3") || fourthChoice.equals("3") || fifthChoice.equals("3")) {
+			FireSupplies fireSupplies = new FireSupplies(false);
+			crew.addItemToCamperInventory(fireSupplies);
+		}
+		
+		if (firstChoice.equals("4") || secondChoice.equals("4") || thirdChoice.equals("4") || fourthChoice.equals("4") || fifthChoice.equals("4")) {
+			WaterAndFood waterAndFood = new WaterAndFood(false);
+			crew.addItemToCamperInventory(waterAndFood);
+		}
+		
+		if (firstChoice.equals("5") || secondChoice.equals("5") || thirdChoice.equals("5") || fourthChoice.equals("5") || fifthChoice.equals("5")) {
+			Map map = new Map(false);
+			crew.addItemToCamperInventory(map);
+		}
+		
+		if (firstChoice.equals("6") || secondChoice.equals("6") || thirdChoice.equals("6") || fourthChoice.equals("6") || fifthChoice.equals("6")) {
+			Tarp tarp = new Tarp(false);
+			crew.addItemToCamperInventory(tarp);
+		}
+		
+//		if (firstChoice.equals("7") || secondChoice.equals("7") || thirdChoice.equals("7") || fourthChoice.equals("7") || fifthChoice.equals("7")) {
+//			Tarp tarp = new Tarp(false);
+//			crew.addItemToCamperInventory(tarp);
+//		}
+//		
+//		if (firstChoice.equals("8") || secondChoice.equals("8") || thirdChoice.equals("8") || fourthChoice.equals("8") || fifthChoice.equals("8")) {
+//			Tarp tarp = new Tarp(false);
+//			crew.addItemToCamperInventory(tarp);
+//		}
+//		
+//		if (firstChoice.equals("9") || secondChoice.equals("9") || thirdChoice.equals("9") || fourthChoice.equals("9") || fifthChoice.equals("9")) {
+//			Tarp tarp = new Tarp(false);
+//			crew.addItemToCamperInventory(tarp);
+//		}
+//		
+//		if (firstChoice.equals("6") || secondChoice.equals("6") || thirdChoice.equals("6") || fourthChoice.equals("6") || fifthChoice.equals("6")) {
+//			Tarp tarp = new Tarp(false);
+//			crew.addItemToCamperInventory(tarp);
+//		}
+		
+		System.out.println(crew.getItems());
 
+	}
 }

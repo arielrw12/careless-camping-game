@@ -2,8 +2,8 @@ package carelesscampinggame.items;
 
 public class Tent extends Item {
 
-	public Tent(String name, boolean possession) {
-		super(name, possession);
+	public Tent(boolean possession) {
+		super(possession);
 	}
 
 
