@@ -2,13 +2,14 @@ package carelesscampinggame.items;
 
 import carelesscampinggame.campingcrew.CampingIndividual;
 
-public class Item {
+public abstract class Item {
 
 	private String name;
 	private boolean possession;
 
-	public Item(String name) {
+	public Item(String name, boolean possession) {
 		this.name = name;
+		this.possession = false;
 	}
 
 	public String getName() {

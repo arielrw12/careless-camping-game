@@ -61,6 +61,12 @@ public class Application {
 			
 		}
 		
+		if (firstChoice.equals("2") || secondChoice.equals("2") || thirdChoice.equals("2") || fourthChoice.equals("2") || fifthChoice.equals("2")) {
+			// create tent class and create tent object below..............................
+			WholeCrew crew = new WholeCrew("crew");
+			Item tent = new Item("tent");
+			crew.addItemToCamperInventory(tent);
+		
 	}
 
 }
