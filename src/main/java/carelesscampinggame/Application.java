@@ -3,10 +3,14 @@ package carelesscampinggame;
 import java.util.Scanner;
 
 import carelesscampinggame.campingcrew.WholeCrew;
+import carelesscampinggame.items.DannyDevito;
 import carelesscampinggame.items.FireSupplies;
+import carelesscampinggame.items.FirstAidKit;
+import carelesscampinggame.items.Guitar;
 import carelesscampinggame.items.Item;
 import carelesscampinggame.items.Map;
 import carelesscampinggame.items.SleepSupplies;
+import carelesscampinggame.items.SunscreenBugspray;
 import carelesscampinggame.items.Tarp;
 import carelesscampinggame.items.Tent;
 import carelesscampinggame.items.WaterAndFood;
@@ -27,6 +31,8 @@ public class Application {
 //		line about having a bookbag with clothes, etc
 		
 		System.out.println("Bob drives a tiny car, so we have a limited amount of space for packing.");
+		
+//		add a line asking if you are ready to go, to break up the text some
 		
 		System.out.println("You can pick 5 of the following items to bring along:");
 		
@@ -52,6 +58,7 @@ public class Application {
 		
 		System.out.println("Which 5 items are you going to pack? Type one item number in then hit enter. You will then get to pick more items, one at a time.");
 		
+		//Make it so you cannot pick an item twice
 		String firstChoice = input.nextLine();
 		String secondChoice = input.nextLine();
 		String thirdChoice = input.nextLine();
@@ -90,27 +97,55 @@ public class Application {
 			crew.addItemToCamperInventory(tarp);
 		}
 		
-//		if (firstChoice.equals("7") || secondChoice.equals("7") || thirdChoice.equals("7") || fourthChoice.equals("7") || fifthChoice.equals("7")) {
-//			Tarp tarp = new Tarp(false);
-//			crew.addItemToCamperInventory(tarp);
-//		}
-//		
-//		if (firstChoice.equals("8") || secondChoice.equals("8") || thirdChoice.equals("8") || fourthChoice.equals("8") || fifthChoice.equals("8")) {
-//			Tarp tarp = new Tarp(false);
-//			crew.addItemToCamperInventory(tarp);
-//		}
-//		
-//		if (firstChoice.equals("9") || secondChoice.equals("9") || thirdChoice.equals("9") || fourthChoice.equals("9") || fifthChoice.equals("9")) {
-//			Tarp tarp = new Tarp(false);
-//			crew.addItemToCamperInventory(tarp);
-//		}
-//		
-//		if (firstChoice.equals("6") || secondChoice.equals("6") || thirdChoice.equals("6") || fourthChoice.equals("6") || fifthChoice.equals("6")) {
-//			Tarp tarp = new Tarp(false);
-//			crew.addItemToCamperInventory(tarp);
-//		}
+		if (firstChoice.equals("7") || secondChoice.equals("7") || thirdChoice.equals("7") || fourthChoice.equals("7") || fifthChoice.equals("7")) {
+			Guitar guitar = new Guitar(false);
+			crew.addItemToCamperInventory(guitar);
+		}
+		
+		if (firstChoice.equals("8") || secondChoice.equals("8") || thirdChoice.equals("8") || fourthChoice.equals("8") || fifthChoice.equals("8")) {
+			FirstAidKit firstAid = new FirstAidKit(false);
+			crew.addItemToCamperInventory(firstAid);
+		}
+		
+		if (firstChoice.equals("9") || secondChoice.equals("9") || thirdChoice.equals("9") || fourthChoice.equals("9") || fifthChoice.equals("9")) {
+			DannyDevito devito = new DannyDevito(false);
+			crew.addItemToCamperInventory(devito);
+		}
+		
+		if (firstChoice.equals("10") || secondChoice.equals("10") || thirdChoice.equals("10") || fourthChoice.equals("10") || fifthChoice.equals("10")) {
+			SunscreenBugspray sunBug= new SunscreenBugspray(false);
+			crew.addItemToCamperInventory(sunBug);
+		}
 		
 		System.out.println(crew.getItems());
+		//make a to string for items
+		
+		System.out.println("Time to hit the road!");
+		
+		System.out.println("What music would you like to listen to? Here are your choices:");
+		System.out.println("1. ");
+		System.out.println("2. ");
+		System.out.println("3. ");
+		System.out.println("4. ");
+		System.out.println("Type in one of these numbers to pick");
+		String musicChoice = input.nextLine();
+		if (!musicChoice.equals("1") && !musicChoice.equals("2") && !musicChoice.equals("3") && !musicChoice.equals("4")) {
+			System.out.println("You must pick a number 1-4");
+		} else {
+			switch (musicChoice) {
+			case "1":
+				//do a thing
+				break;
+			case "2":
+				
+				break;
+				//etc.......................................
+			}
+		}
+		
+		// what's next?
+		
+		
 
 	}
 }
