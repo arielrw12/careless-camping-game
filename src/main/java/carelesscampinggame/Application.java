@@ -131,15 +131,24 @@ public class Application {
 		String musicChoice = input.nextLine();
 		if (!musicChoice.equals("1") && !musicChoice.equals("2") && !musicChoice.equals("3") && !musicChoice.equals("4")) {
 			System.out.println("You must pick a number 1-4");
+			//String musicChoice = input.nextLine();
 		} else {
 			switch (musicChoice) {
 			case "1":
 				//do a thing
 				break;
+				
 			case "2":
 				
 				break;
-				//etc.......................................
+
+			case "3":
+				
+				break;
+				
+			case "4":
+				
+				break;
 			}
 		}
 		
